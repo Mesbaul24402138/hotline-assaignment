@@ -1,54 +1,319 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- daisi ui cdn -->
-      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Service Directory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body>
- <header>
+<body class="bg-[#f6fdf9]">
 
-    <nav class="flex h-[100px] justify-between items-center ml-20 mr-20">
-         <div class="flex h-[50px] gap-4">
-          <img src="assets/logo.png">
-          <h1 class="font-bold text-lg">Emergency <br> Sirvices</h1>
-         </div>
-         
-         <ul class="h-52 flex justify-center items-center gap-4">
-                <li class="flex h-15 w-40 p-[7px]  rounded-[50px] justify-center items-center gap-1 bg-[#41ff6b1a]">
-                  <h3 class="font-bold">0</h3>
-                  <img class="h-full" src="assets/heart.png">
-                </li>
-                <li class="flex h-15 w-40 p-[7px] rounded-[50px] justify-center items-center gap-1 bg-[#41ff6b1a]">
-                   <h3 class="font-bold">100</h3>
-                  <img class="h-full" src="assets/coin.png">
-                </li>
-                <li ><button class="flex text-white font-bold h-15 w-40 p-[7px] rounded-[50px] justify-center items-center gap-1 bg-[#00a63e]">2 Copy</button></li>
-          </ul>
-         
-    </nav>
+ 
 
 
-<!-- navber is complete -->
+  <!-- Navbar -->
+  <nav class="w-full bg-white shadow flex items-center justify-between px-6 py-3">
+    <div class="flex items-center gap-2">
+      <img src="./assets/logo.png" class="w-8 h-8" alt="logo">
+      <span class="font-semibold text-lg">Emergency Service</span>
+    </div>
+    <div class="flex items-center gap-4 ">
+      <div class="flex items-center gap-1 bg-green-200 rounded-lg px-3 py-1">
+        <span class="text-red-600 text-xl">❤</span>
+        <span id="heartCount">0</span>
+      </div>
+      <div class="flex items-center gap-1 bg-green-200 rounded-lg px-3 py-1 ">
+        <span class="text-yellow-500 text-xl ">🪙</span>
+        <span id="coinCount">100</span>
+      </div>
+      <div class="flex items-center gap-1 bg-green-800 rounded-lg px-3 py-1 text-white ">
+        <span class="text-gray-700"></span>
+        <span id="copyCount">0 Copy</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- <section class="bg-gradient-to-r from-green-900 to-green-600 text-white text-center py-8"> -->
+ <section class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-white text-center py-8">
+
+    <img src="./assets/logo-dark.png" class="w-20 h-20 mx-auto mb-3" alt="bd-logo">
+    <h1 class="text-2xl font-bold">Emergency Service Directory</h1>
+    <p class="text-sm mt-1">Government Emergency Services at Your Fingertip – A Project by Government of the People's Republic of Bangladesh</p>
+  </section>
+
+  <!-- Main Section -->
+  <main class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6 py-8 px-4">
 
 
-<!-- banner is start from here -->
- <div class="h-[239px] w-full flex justify-center items-center text-white bg-gradient-to-r from-green-950 via-green-600 to-green-950"">
-     
-    <div class=" flex flex-col justify-center items-center gap-3">
-      <img class="h-[92px] w-[92px]" src="assets/logo-dark.png">
-      <h1 class="font-extrabold text-[30px]">Emergency Service Directory</h1>
-      <p class="text-[20px] font-semibold">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+    <!-- Cards Section -->
+    <div class="lg:col-span-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+      <!-- Card Example -->
+
+
+      <!-- National Emergency Number -->
+      <div class="bg-white p-4 rounded-lg shadow relative">
+        <div class="w-20">
+        <img src="./assets/emergency.png" alt="">
+        </div>
+        <br>
+        <button class="heart-btn absolute top-5 right-5">❤</button>
+        <h3 class="font-semibold">National Emergency Number</h3>
+        <p class="text-sm text-gray-500">National Emergency</p>
+        <p class="text-2xl font-bold mt-2">999</p>
+        <br>
+        <span class="badge badge-outline mt-1 bg-gray-200">All</span>
+        <div class="flex justify-between mt-4 ">
+          <button class="copy-btn btn btn-outline btn-sm w-20 " data-number="999">Copy</button>
+          <button class="call-btn btn btn-success btn-sm w-40 text-white " data-name="National Emergency Number" data-number="999">Call</button>
+        </div>
+      </div>
+
+      
+<!-- Police Helpline Number -->
+<div class="bg-white p-4 rounded-lg shadow relative">
+    <div class="w-20">
+        <img src="./assets/police.png" alt="">
+        </div>
+        <br>
+        <button class="heart-btn absolute top-5 right-5">❤</button>
+        <h3 class="font-semibold">Police Helpline Number</h3>
+        <p class="text-sm text-gray-500">Police</p>
+        <p class="text-2xl font-bold mt-2">999</p>
+        <br>
+        <span class="badge badge-outline mt-1 bg-gray-200">Police</span>
+        <div class="flex justify-between mt-4 ">
+          <button class="copy-btn btn btn-outline btn-sm w-20 " data-number="999">Copy</button>
+          <button class="call-btn btn btn-success btn-sm w-40 text-white" data-name="National Emergency Number" data-number="999">Call</button>
+        </div>
+      </div>
+
+
+<!-- Fire Service Number -->
+      <div class="bg-white p-4 rounded-lg shadow relative">
+         <div class="w-20">
+        <img src="./assets/fire-service.png" alt="">
+        </div>
+        <br>
+        <button class="heart-btn absolute top-5 right-5">❤</button>
+        <h3 class="font-semibold">Fire Service Number</h3>
+        <p class="text-sm text-gray-500">Fire Service</p>
+        <p class="text-2xl font-bold mt-2">999</p>
+        <br>
+        <span class="badge badge-outline mt-1 bg-gray-200">Fire          </span>
+        <div class="flex justify-between mt-4 ">
+          <button class="copy-btn btn btn-outline btn-sm w-20 " data-number="999">Copy</button>
+          <button class="call-btn btn btn-success btn-sm w-40 text-white " data-name="National Emergency Number" data-number="999">Call</button>
+        </div>
+      </div>
+
+
+
+      <!-- Ambulance Service -->
+      <div class="bg-white p-4 rounded-lg shadow relative">
+         <div class="w-20">
+        <img src="./assets/ambulance.png" alt="">
+        </div>
+        <br>
+        <button class="heart-btn absolute top-5 right-5">❤</button>
+        <h3 class="font-semibold">Ambulance Service</h3>
+        <p class="text-sm text-gray-500">Ambulance</p>
+        <p class="text-2xl font-bold mt-2">1994-999999</p>
+        <br>
+        <span class="badge badge-outline mt-1 bg-gray-200">Health</span>
+        <div class="flex justify-between mt-4 ">
+          <button class="copy-btn btn btn-outline btn-sm w-20 " data-number="999">Copy</button>
+          <button class="call-btn btn btn-success btn-sm w-40  text-white" data-name="National Emergency Number" data-number="999">Call</button>
+        </div>
+      </div>
+
+
+      <!-- Women & Child Helpline -->
+      <div class="bg-white p-4 rounded-lg shadow relative">
+        <div class="w-20">
+        <img src="./assets/emergency.png" alt="">
+        </div>
+        <br>
+        <button class="heart-btn absolute top-5 right-5">❤</button>
+        <h3 class="font-semibold">Women & Child Helpline</h3>
+        <p class="text-sm text-gray-500">Women & Child Helpline</p>
+        <p class="text-2xl font-bold mt-2">109</p>
+        <br>
+        <span class="badge badge-outline mt-1 bg-gray-200">Help</span>
+        <div class="flex justify-between mt-4 ">
+          <button class="copy-btn btn btn-outline btn-sm w-20 " data-number="999">Copy</button>
+          <button class="call-btn btn btn-success btn-sm w-40 text-white" data-name="National Emergency Number" data-number="999">Call</button>
+        </div>
+      </div>
+
+
+
+       <!-- Anti-Corruption Helpline -->
+      <div class="bg-white p-4 rounded-lg shadow relative">
+           <div class="w-20">
+        <img src="./assets/emergency.png" alt="">
+        </div>
+        <br>
+        <button class="heart-btn absolute top-5 right-5">❤</button>
+        <h3 class="font-semibold">Anti-Corruption Helpline</h3>
+        <p class="text-sm text-gray-500">Anti-Corruption</p>
+        <p class="text-2xl font-bold mt-2">106</p>
+        <br>
+        <span class="badge badge-outline mt-1 bg-gray-200">Govt.</span>
+        <div class="flex justify-between mt-4 ">
+          <button class="copy-btn btn btn-outline btn-sm w-20 " data-number="999">Copy</button>
+          <button class="call-btn btn btn-success btn-sm w-40 text-white" data-name="National Emergency Number" data-number="999">Call</button>
+        </div>
+      </div>
+
+
+
+      <!-- Electricity Helpline -->
+      <div class="bg-white p-4 rounded-lg shadow relative">
+        <div class="w-20">
+        <img src="./assets/emergency.png" alt="">
+        </div>
+        <br>
+        <button class="heart-btn absolute top-5 right-5">❤</button>
+        <h3 class="font-semibold">Electricity Helpline</h3>
+        <p class="text-sm text-gray-500">Electricity Outage</p>
+        <p class="text-2xl font-bold mt-2">16216</p>
+        <br>
+        <span class="badge badge-outline mt-1 bg-gray-200">Electricity</span>
+        <div class="flex justify-between mt-4 ">
+          <button class="copy-btn btn btn-outline btn-sm w-20 " data-number="999">Copy</button>
+          <button class="call-btn btn btn-success btn-sm w-40 text-white" data-name="National Emergency Number" data-number="999">Call</button>
+        </div>
+      </div>
+
+
+      <!-- Brac Helpline -->
+      <div class="bg-white p-4 rounded-lg shadow relative">
+        <div class="w-20">
+        <img src="./assets/brac.png" alt="">
+        </div>
+        <br>
+        <button class="heart-btn absolute top-5 right-5">❤</button>
+        <h3 class="font-semibold">Brac Helpline</h3>
+        <p class="text-sm text-gray-500">Brac</p>
+        <p class="text-2xl font-bold mt-2">16445</p>
+        <br>
+        <span class="badge badge-outline mt-1 bg-gray-200">NGO</span>
+        <div class="flex justify-between mt-4 ">
+          <button class="copy-btn btn btn-outline btn-sm w-20 " data-number="999">Copy</button>
+          <button class="call-btn btn btn-success btn-sm w-40 text-white" data-name="National Emergency Number" data-number="999">Call</button>
+        </div>
+      </div>
+
+
+
+      <!-- Bangladesh Railway Helpline  -->
+      <div class="bg-white p-4 rounded-lg shadow relative">
+        <div class="w-20">
+        <img src="./assets/Bangladesh-Railway.png" alt="">
+        </div>
+        <br>
+        <button class="heart-btn absolute top-5 right-5">❤</button>
+        <h3 class="font-semibold">Bangladesh Railway Helpline </h3>
+        <p class="text-sm text-gray-500">Bangladesh Railway</p>
+        <p class="text-2xl font-bold mt-2">163</p>
+        <br>
+        <span class="badge badge-outline mt-1 bg-gray-200">Travel</span>
+        <div class="flex justify-between mt-4 ">
+          <button class="copy-btn btn btn-outline btn-sm w-20 " data-number="999">Copy</button>
+          <button class="call-btn btn btn-success btn-sm w-40 text-white" data-name="National Emergency Number" data-number="999">Call</button>
+        </div>
+      </div>
+
     </div>
 
-</div>
 
-<!-- banner is end from here -->
+    <!-- History Section -->
+    <aside class="bg-white rounded-lg shadow p-4 h-fit ">
+      <div class="flex justify-between items-center mb-3">
+        <h2 class="font-semibold flex items-center gap-2">📞 Call History</h2>
+        <button id="clearHistory" class="btn btn-ghost btn-sm bg-green-600 text-white">Clear</button>
+      </div>
+      <div id="historyList" class="space-y-2 text-sm text-gray-700"></div>
+    </aside>
+  </main>
 
+  <script>
+    let coins = 100;
+    let hearts = 0;
+    let copies = 0;
 
- </header>
+    const coinEl = document.getElementById('coinCount');
+    const heartEl = document.getElementById('heartCount');
+    const copyEl  = document.getElementById('copyCount');
+    const historyList = document.getElementById('historyList');
+
+    function refreshCounters() {
+      coinEl.textContent = coins;
+      heartEl.textContent = hearts;
+      copyEl.textContent = copies + ' Copy';
+    }
+
+    function nowTimeString() {
+      return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    }
+
+    document.querySelectorAll('.heart-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        hearts++;
+        refreshCounters();
+      });
+    });
+
+    async function copyToClipboard(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch {
+        return false;
+      }
+    }
+
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const number = btn.dataset.number;
+        if (await copyToClipboard(number)) {
+          copies++;
+          refreshCounters();
+          alert('Copied: ' + number);
+        }
+      });
+    });
+
+    document.querySelectorAll('.call-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.dataset.name;
+        const number = btn.dataset.number;
+        if (coins < 20) {
+          alert('Not enough coins! Need 20.');
+          return;
+        }
+        coins -= 20;
+        refreshCounters();
+        alert('Calling ' + name + ' (' + number + ')...');
+        const div = document.createElement('div');
+        div.className = 'flex justify-between';
+        div.innerHTML = `<span>${name} - ${number}</span><span>${nowTimeString()}</span>`;
+        historyList.prepend(div);
+      });
+    });
+
+    document.getElementById('clearHistory').addEventListener('click', () => {
+      historyList.innerHTML = '';
+    });
+
+    refreshCounters();
+  </script>
 </body>
 </html>
