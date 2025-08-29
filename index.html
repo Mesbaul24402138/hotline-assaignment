@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
+     <!-- daisi ui cdn -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
 </head>
 <body>
  <header>
-    <nav>
-        <div class="logo">
-            <img class="logo-icon" src="assets/logo.png">
-            <h1>Emergency<br>Sirvice</span></h1>
-        </div>
 
-        <ul class="nav-items">
-            <li>
-                
-                <h4>0</h4>
-                <img class="nav-item-logo" src="assets/heart.png">
-            </li>
-            <li>
-                <h4>100</h4>
-                <img class="nav-item-logo" class="nav-item" src="assets/coin.png" >
-            </li>
-          <button class="small-font-size nav-btn" id="btn-color">2 copy</button>
-        </ul>
+    <nav class="flex h-[100px] justify-between items-center ml-20 mr-20">
+         <div class="flex h-[50px] gap-4">
+          <img src="assets/logo.png">
+          <h1 class="font-bold text-lg">Emergency <br> Sirvices</h1>
+         </div>
          
-       
+         <ul class="h-52 flex justify-center items-center gap-4">
+                <li class="flex h-15 w-40 p-[7px]  rounded-[50px] justify-center items-center gap-1 bg-[#41ff6b1a]">
+                  <h3 class="font-bold">0</h3>
+                  <img class="h-full" src="assets/heart.png">
+                </li>
+                <li class="flex h-15 w-40 p-[7px] rounded-[50px] justify-center items-center gap-1 bg-[#41ff6b1a]">
+                   <h3 class="font-bold">100</h3>
+                  <img class="h-full" src="assets/coin.png">
+                </li>
+                <li ><button class="flex text-white font-bold h-15 w-40 p-[7px] rounded-[50px] justify-center items-center gap-1 bg-[#00a63e]">2 Copy</button></li>
+          </ul>
+         
     </nav>
 
 
@@ -35,6 +36,10 @@
 
 
 <!-- banner is start from here -->
+
+<!-- banner is end from here -->
+
+
  </header>
 </body>
 </html>
